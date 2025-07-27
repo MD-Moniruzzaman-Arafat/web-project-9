@@ -167,7 +167,8 @@
                                 </div>
                                 <div>
                                     <a class="btn border-[#1DD100] rounded-lg text-[#1DD100]"> <img
-                                            src="./images/seat-green.png" alt=""> 40 Seats left</a>
+                                            src="./images/seat-green.png" alt=""> <span id="total-seat">40</span> Seats
+                                        left</a>
                                 </div>
                             </div>
                             <div class="bg-[#F7F8F8] rounded-lg p-5 m-5">
@@ -217,7 +218,7 @@
                             <img src="./images/tabler-icon-steering-wheel.svg" alt=""
                                 class="bg-[#03071233] rounded-lg px-8 py-2">
                         </div>
-                        <div>
+                        <div id="select-seat">
                             <div class="flex justify-between items-center gap-10  my-5 w-full">
                                 <p class="w-10">A</p>
                                 <div class="flex justify-start gap-20 w-full">
@@ -376,22 +377,13 @@
                         <p class="border-b-1 border-dashed mt-5 border-[#03071233]"></p>
                         <div class="bg-[#F7F8F8] p-5 my-5 rounded-lg">
                             <div class="flex justify-between border-b-1 border-dashed border-[#03071233] pb-2">
-                                <span>Seat <span
-                                        class="bg-[#1DD100] text-sm text-white p-1 rounded-full">2</span></span>
+                                <span>Seat <span class="bg-[#1DD100] text-sm text-white p-1 rounded-full"
+                                        id="ticket-count">0</span></span>
                                 <span>Class</span>
                                 <span>Price</span>
                             </div>
-                            <div class="border-b-2 border-[#03071233]">
-                                <div class="flex justify-between text-[#03071299] py-2">
-                                    <span>C2</span>
-                                    <span>Economoy</span>
-                                    <span>550</span>
-                                </div>
-                                <div class="flex justify-between text-[#03071299] py-2">
-                                    <span>C2</span>
-                                    <span>Economoy</span>
-                                    <span>550</span>
-                                </div>
+                            <div id="tickets" class="border-b-2 border-[#03071233]">
+
                             </div>
                             <div class="flex justify-between py-2">
                                 <span>Total Price </span>
