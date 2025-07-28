@@ -1,5 +1,6 @@
 let totalSeats = 40;
 let ticketCount = 0;
+let totalAmount = 0;
 document.getElementById('select-seat').addEventListener('click', function (event) {
     // console.log(event.target.classList.contains("bg-green-500"))
     if (!event.target.classList.contains("bg-green-500")) {
@@ -27,8 +28,13 @@ document.getElementById('select-seat').addEventListener('click', function (event
 
         // totat seat left
         document.getElementById('total-seat').innerText = totalSeats -= 1;
-        document.getElementById('ticket-count').innerText = ticketCount += 1
+        document.getElementById('ticket-count').innerText = ticketCount += 1;
 
+        // totalAmount
+        totalAmount += 550
+
+        // show total Amount 
+        document.getElementById("total-price").innerText = totalAmount
     }
 
 })
