@@ -1,6 +1,7 @@
 let totalSeats = 40;
 let ticketCount = 0;
 let totalAmount = 0;
+
 document.getElementById('select-seat').addEventListener('click', function (event) {
     // console.log(event.target.classList.contains("bg-green-500"))
     if (!event.target.classList.contains("bg-green-500")) {
@@ -35,6 +36,15 @@ document.getElementById('select-seat').addEventListener('click', function (event
 
         // show total Amount 
         document.getElementById("total-price").innerText = totalAmount
+
+        // remove disable attribute in cupon field
+        if (ticketCount > 2) {
+            document.getElementById('cupon').removeAttribute('disabled')
+        }
     }
+
+})
+
+document.getElementById("cupon-apply-button").addEventListener('click', function () {
 
 })
