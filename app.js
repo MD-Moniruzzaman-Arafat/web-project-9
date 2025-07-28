@@ -1,6 +1,7 @@
 let totalSeats = 40;
 let ticketCount = 0;
 let totalAmount = 0;
+let grandTotal = 0;
 
 document.getElementById('select-seat').addEventListener('click', function (event) {
     // console.log(event.target.classList.contains("bg-green-500"))
@@ -37,14 +38,37 @@ document.getElementById('select-seat').addEventListener('click', function (event
         // show total Amount 
         document.getElementById("total-price").innerText = totalAmount
 
+        // show grand total
+        document.getElementById("grand-total").innerText = totalAmount
+
+
         // remove disable attribute in cupon field
         if (ticketCount > 2) {
             document.getElementById('cupon').removeAttribute('disabled')
+        }
+
+        // remove disable attribute in next button
+        if (ticketCount >= 1) {
+            document.getElementById("next").removeAttribute('disabled')
         }
     }
 
 })
 
 document.getElementById("cupon-apply-button").addEventListener('click', function () {
+    const cuponValue = document.getElementById('cupon').value
+
+    if (cuponValue === 'NEW15') {
+        grandTotal += totalAmount - (totalAmount * .15)
+        document.getElementById("grand-total").innerText = grandTotal
+    }
+
+    if (cuponValue === 'Couple 20') {
+        grandTotal += totalAmount - (totalAmount * .20)
+        document.getElementById("grand-total").innerText = grandTotal
+    }
 
 })
+
+
+
